@@ -1,5 +1,7 @@
 package sk.stuba.fei.uim.oop;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Main {
@@ -37,6 +39,10 @@ public class Main {
             i++;
         }
 
+        zoznam.toArray(new Znamy[0]);
 
+        var cisla = Arrays.asList(new String[] {"one", "two", "three"});
+        var cislaMutable = new ArrayList<>(cisla);
+        cislaMutable.add("four");
     }
 }
