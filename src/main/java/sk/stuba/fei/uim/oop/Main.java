@@ -1,15 +1,16 @@
 package sk.stuba.fei.uim.oop;
 
+import java.util.LinkedList;
+
 public class Main {
 
     public static void main(String[] args) {
-        var absolvent = new Graduate("Ing.","Tomas", "Kovacik");
-
-        absolvent.setFriends(new Graduate("Ing.","Martin", "Kranec"), new Graduate("Ing.","Jakub", "Kovar"));
-
-        System.out.println(absolvent.akoText());
-        System.out.println(absolvent.akoTextSTitulom());
-
-        System.out.println(absolvent);
+        var zoznam = new LinkedList<Znamy>();
+        zoznam.add(new NoZnamy());
+        zoznam.add(new Graduate("Ing.", "Tomas", "Kovacik"));
+        zoznam.add(1, new NoZnamy());
+        System.out.println(zoznam.size());
+        zoznam.add(new NoZnamy());
+        zoznam.remove(1);
     }
 }
