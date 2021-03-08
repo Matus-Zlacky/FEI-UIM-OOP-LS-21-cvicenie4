@@ -1,6 +1,6 @@
 package sk.stuba.fei.uim.oop;
 
-public class Contact {
+public abstract class Contact {
 
     private String firstName;
     private String surname;
@@ -23,10 +23,6 @@ public class Contact {
         this.surname = other.surname;
     }
 
-    public static Contact parseFromFullName(String fullName) {
-        return new Contact(fullName);
-    }
-
     public void setFriends(Contact... newFriends) {
         this.friends = newFriends;
     }
@@ -39,15 +35,14 @@ public class Contact {
         this.firstName = firstName;
     }
 
-    public Contact[] getFriends() {
-        var friendsClone = new Contact[this.friends.length];
-        for(int i = 0; i < this.friends.length; i++) {
-            friendsClone[i] = new Contact(this.friends[i]);
-        }
-        return friendsClone;
-    }
-
     public String akoText() {
         return String.format("%s %s", this.firstName, this.surname);
+    }
+
+    public abstract String getZnamy();
+
+    @Override
+    public String toString() {
+        return String.format("Volam sa %s\n%s", this.akoText(), this.getZnamy());
     }
 }

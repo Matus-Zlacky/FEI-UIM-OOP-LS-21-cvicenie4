@@ -22,4 +22,15 @@ public class Graduate extends Contact {
     public String akoText() {
         return String.format("%s %s", this.academicTitle, super.akoText());
     }
+
+    @Override
+    public String getZnamy() {
+        var builder = new StringBuilder();
+        builder.append("Mojy znamy:\n");
+        for (int i = 0; i < this.friends.length; i++) {
+            builder.append(this.friends[i].akoText());
+            builder.append("\n");
+        }
+        return builder.toString();
+    }
 }
