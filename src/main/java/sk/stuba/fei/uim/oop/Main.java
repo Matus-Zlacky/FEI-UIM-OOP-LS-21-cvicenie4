@@ -24,5 +24,19 @@ public class Main {
         for(var prvok : zoznam) {
             System.out.println(prvok.getZnamy());
         }
+
+        int i = 0;
+        var iterator = zoznam.iterator();
+        while (iterator.hasNext()) {
+            var prvok = iterator.next();
+            if (i < 1) {
+                System.out.println(prvok.getZnamy());
+            } else {
+                iterator.remove();
+            }
+            i++;
+        }
+
+
     }
 }
