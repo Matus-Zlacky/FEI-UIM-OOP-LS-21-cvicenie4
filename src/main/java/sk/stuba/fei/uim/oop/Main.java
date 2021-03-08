@@ -12,5 +12,17 @@ public class Main {
         System.out.println(zoznam.size());
         zoznam.add(new NoZnamy());
         zoznam.remove(1);
+
+        for(int i = 0; i < zoznam.size(); i++) {
+            System.out.println(zoznam.get(i).getZnamy());
+        }
+
+        for(Znamy prvok : zoznam) {
+            System.out.println(prvok.getZnamy());
+        }
+
+        for(var prvok : zoznam) {
+            System.out.println(prvok.getZnamy());
+        }
     }
 }
