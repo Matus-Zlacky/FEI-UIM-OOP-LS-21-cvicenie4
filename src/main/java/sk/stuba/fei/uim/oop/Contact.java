@@ -5,7 +5,7 @@ public class Contact {
     private String firstName;
     private String surname;
 
-    private Contact[] friends;
+    protected Contact[] friends;
 
     public Contact(String firstName, String surname) {
         this.firstName = firstName;
@@ -45,5 +45,9 @@ public class Contact {
             friendsClone[i] = new Contact(this.friends[i]);
         }
         return friendsClone;
+    }
+
+    public String akoText() {
+        return String.format("%s %s", this.firstName, this.surname);
     }
 }
