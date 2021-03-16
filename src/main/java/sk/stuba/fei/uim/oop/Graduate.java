@@ -27,7 +27,7 @@ public class Graduate extends Contact {
     @Override
     public String getZnamy() {
         var builder = new StringBuilder();
-        builder.append("Mojy znamy:\n");
+        builder.append("Moji znamy:\n");
         for (int i = 0; i < this.friends.length; i++) {
             builder.append(this.friends[i].akoText());
             builder.append("\n");

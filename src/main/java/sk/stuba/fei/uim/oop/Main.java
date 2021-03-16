@@ -44,5 +44,16 @@ public class Main {
         var cisla = Arrays.asList(new String[] {"one", "two", "three"});
         var cislaMutable = new ArrayList<>(cisla);
         cislaMutable.add("four");
+
+        //PIRKLADY
+        uloha4();
+
     }
+    public static void uloha4(){
+        Clovek Jano = new Clovek(2);
+        Pes Dunco = new Pes(4);
+        Jano.zvuk();
+        Dunco.zvuk();
+    }
+
 }
